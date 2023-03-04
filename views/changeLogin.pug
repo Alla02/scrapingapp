@@ -1,0 +1,18 @@
+extends layout
+block variables
+    include variables
+block content
+    div.container
+        div.row
+            div.login
+                h2.text-center.login-title Изменение логина
+                div.account-wall
+                form(action='/changeLogin', method='POST')
+                    label(class="text-form") Логин:
+                    input(type='text', name='newlogin' class='form-control', placeholder='Новый логин' required="true")
+                    button(class='btn btn-lg btn-primary btn-block mt-4', type='submit') Сохранить
+                    span.clearfix
+
+                div(id="message")
+                if message
+                    div(class="text-center error-message") #{message}

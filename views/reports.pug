@@ -1,0 +1,82 @@
+extends layout
+block variables
+    include variables
+block append scripts
+    script(src="/javascripts/scriptReports.js")
+block content
+    main.my-form
+        input#idTeacher(type='hidden' value=idTeacher)
+        input#idStudent(type='hidden' value=idStudent)
+        input#idParent(type='hidden' value=idParent)
+        .cotainer
+            .row.justify-content-center
+                .col-md-10
+                    .card
+                        .card-header Отчеты
+                        .card-body
+                            .row
+                                label.col-form-label Выбрать марку
+                                select(id='selectBrandReports' class='form-control')
+                                    option(value=0)
+                                    each val in brands
+                                        option(value=val.id) #{val.name}
+                                label.col-form-label Выбрать модель
+                                select(id='selectModelReports' class='form-control')
+                                    option(value=0)
+                                label.col-form-label Выбрать модификацию
+                                select(id='selectModificationReports' class='form-control')
+                                    option(value=0)
+                                button.btn.btn-primary(type='submit' onclick='getReport()')
+                                    | Получить
+                                .row
+                                    li(class="list-group-item serviceList") Дополнительные параметры поиска
+                                        i(class="caret fa fa-caret-down")
+                                    div(class="slide")
+                                        .row 
+                                            label.col-form-label Выбрать тип характеристики  
+                                        .row                
+                                            each val in propeties 
+                                                .form-check
+                                                    input(type='checkbox' class='form-check-input' label=val.name value=val.id)
+                                                    label(class='form-check-label') #{val.name}
+                            br
+                            ul#myTab.nav.nav-tabs(role='tablist')
+                                li.nav-item
+                                    a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true') Таблица
+                                li.nav-item
+                                    a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false') График
+                            #myTabContent.tab-content
+                                #home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+                                    div(id="modelTable" style='display:none')
+                                        table#tableReports.table.table-bordered.table-responsive(style="width:100%")
+                                            thead
+                                                tr
+                                            tbody#addRows
+                                            tfoot
+                                                tr
+                                    div(id="modificationTable" style='display:none')
+                                        table#tableReports2.table.table-bordered.table-responsive(style="width:100%")
+                                            thead
+                                                tr
+                                            tbody#addRows2
+                                            tfoot
+                                                tr
+                                    div(id="carsTable" style='display:none')
+                                        table#tableReports3.table.table-bordered.table-responsive(style="width:100%")
+                                            thead
+                                                tr
+                                            tbody#addRows3
+                                            tfoot
+                                                tr
+                                    div(id="propertiesTable" style='display:none')
+                                        table#tableReports4.table.table-bordered.table-responsive(style="width:100%")
+                                            thead
+                                                tr
+                                            tbody#addRows4
+                                            tfoot
+                                                tr
+                                #profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab')
+                                    .chart-container(style='position: relative; width:40%')
+                                        canvas#results-chart(width='200', height='200')
+
+

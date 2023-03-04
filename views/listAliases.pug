@@ -1,0 +1,30 @@
+extends layout
+block variables
+  include variables
+block content
+    br
+    .container
+      h2=title
+      br
+      form(class="form-signin" id="formGroup" action='/addAlias', method='POST')
+        div(class="form-row")
+          div(class="col-lg-4 col-md-4 col-sm-4 col-xs-4")
+            input(name='nameAlias' id='nameAlias' class="form-control required" type="text" placeholder='Псевдоним')
+          div(class="col-lg-3 col-md-3 col-sm-3 col-xs-6 mb-3")
+            select(type='text', name='property' class='form-control')
+              each value in properties
+                option(value=value.id) #{value.name}
+          p
+          div(class="col-lg-6 col-md-6 col-sm-6 col-xs-6")
+            input(class="btn btn-success" type='submit', id="addGroup" value='Добавить')
+      br
+      ul(class="list-group")
+      each val in result
+        li(class="list-group-item serviceList" id = val.aliasId ) #{val.aliasName} - #{val.name}
+          i(class="caret fa fa-caret-down")
+        div(class="slide")
+          br
+          a(class="btn btn-dark" href='/brand/' + val.id role="button") Изменить
+          font()=" "
+          a(class="btn btn-danger" href='/delBrand/' + val.id role="button") Удалить
+          p

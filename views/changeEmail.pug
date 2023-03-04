@@ -1,0 +1,18 @@
+extends layout
+block variables
+    include variables
+block content
+    div.container
+        div.row
+            div.login
+                h2.text-center.login-title Изменение e-mail
+                div.account-wall
+                form(id="changeEmail" action='/changeEmail', method='POST')
+                    label(class="text-form") E-mail:
+                    input(type='text', name='email' class='form-control', placeholder='Новый e-mail')
+                    button(class='btn btn-lg btn-primary btn-block mt-4', type='submit') Сохранить
+                    span.clearfix
+
+                div(id="message")
+                if message
+                    div(class="text-center error-message") #{message}

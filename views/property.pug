@@ -1,0 +1,24 @@
+extends layout
+block variables
+  include variables
+block append scripts
+    script(src="/javascripts/script.js")
+block content
+  .container
+    br
+    h2= "Изменение данных характеристики"
+    br
+    .form-row
+      .col-lg-2.col-md-2.col-sm-2.col-xs-6.mb-3
+        input(name='name' class="form-control" type="text" id="name" value=val.name)
+      label.col-form-label Тип:
+      .col-md-2
+        select(name='selectType' class='form-control' id='selectType')
+          option(selected= type === 'Число') Число
+          option(selected= type === 'Строка') Строка
+          option Ссылка
+          option Логический
+      .col
+        input(type='submit' class="btn btn-primary" onclick='updateProperty()', value='Изменить')
+        font()=" "
+        a(class="btn btn-secondary" href='/listProperties' role="button") Отмена

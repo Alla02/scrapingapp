@@ -1,0 +1,42 @@
+extends layout
+block variables
+    include variables
+block content
+    main.my-form
+      .cotainer
+        .row.justify-content-center
+          .col-md-8
+            .card
+              .card-header Регистрация
+              .card-body
+                form(name='my-form', action='/register', method='post')
+                  .form-group.row
+                    label.col-md-4.col-form-label.text-md-right Логин:
+                    .col-md-6
+                        input(type='text', name='login' class='form-control required', placeholder='Логин', autofocus)
+                  .form-group.row
+                    label.col-md-4.col-form-label.text-md-right Пароль:
+                    .col-md-6
+                        input(type='text', name='password' class='form-control required', placeholder='Пароль')
+                  .form-group.row
+                    label.col-md-4.col-form-label.text-md-right Повторите пароль:
+                    .col-md-6
+                        input(type='text', name='password2' class='form-control required', placeholder='Повторите пароль')
+                  .form-group.row
+                    label.col-md-4.col-form-label.text-md-right Email:
+                    .col-md-6
+                        input(type='text', name='email' class='form-control required', placeholder='Email')
+                  .form-group.row
+                    label.col-md-4.col-form-label.text-md-right Тип пользователя:
+                    .col-md-6
+                      select(name='user_type' class='form-control' id='SelectTypeReg')
+                        option Администратор
+                        option Пользователь
+                  .col-md-6.offset-md-4
+                    button.btn.btn-primary(type='submit' id="writeDown1")
+                      | Зарегистрироваться
+                #message
+                if message
+                h1.text-center.error-message #{message}
+
+

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	main.my-form
+		.cotainer
+			.row.justify-content-center
+				.col-md-8
+					.card
+						.card-header Импорт 
+						.card-body
+							form(name='formImport', action='/parser', method='post')
+								input(type='text', name='address' class='form-control required', placeholder='URL источника')
+								.col-md-6.offset-md-4
+									button.btn.btn-primary(type='submit')
+										| Импортировать
+
+							div(id="message")
+							if message
+								div(class="text-center error-message") #{message}

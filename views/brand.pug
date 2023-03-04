@@ -1,0 +1,16 @@
+extends layout
+block variables
+  include variables
+block content
+  .container
+    br
+    h2= "Изменение данных марки"
+    br
+    form(action='/brand/'+val.id, method='post')
+      .form-row
+        .col-lg-2.col-md-2.col-sm-2.col-xs-6.mb-3
+          input(name='name' class="form-control" type="text" value=val.name)
+        .col
+          input(type='submit' class="btn btn-primary", value='Изменить')
+          font()=" "
+          a(class="btn btn-secondary" href='/listBrands' role="button") Отмена

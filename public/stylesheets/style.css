@@ -1,0 +1,104 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.navbar-laravel
+{
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+    font-family: Raleway, sans-serif;
+}
+
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.slide {
+    display:none;
+}
+
+/*скрытие блока*/
+.div-none{
+    display: none;
+}
+
+
+.present {
+    background-color: #B4F695;
+}
+
+.absent {
+    background-color: #F6C195;
+}
+
+.late {
+    background-color: #95EBF6;
+}
+
+.excused {
+    background-color: #9D95F6;
+}
+
+.selected {
+    /*border-radius: 20px;*/
+    box-shadow: inset 0 0 0px 1px
+}
+
+.comment{
+    visibility: hidden
+}
+
+.table-responsive {
+    max-height:400px;
+}
+
+.typeLection, .typePractice, .check{
+    font-size: 13px;
+}
+/*для списка студентов, прикрепляется влево*/
+.stickyLeft {
+    position: sticky;
+    left: -2px;
+    background: #FFFFFF;
+}
+
+.stickyHead {
+    position: sticky;
+    background: #FFFFFF;
+}

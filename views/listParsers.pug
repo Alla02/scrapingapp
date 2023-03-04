@@ -1,0 +1,31 @@
+extends layout
+block variables
+  include variables
+block content
+    br
+    .container
+      h2=title
+      form(action='/addParser', enctype="multipart/form-data" method="POST")
+        div(class="form-row")
+          div(class="col-lg-6 col-md-6 col-sm-6 col-xs-7 mb-3")
+            input(name='name', class="form-control" type="text" placeholder='Название парсера' required)
+          div(class="col-lg-6 col-md-6 col-sm-6 col-xs-7 mb-3")
+            input(name='url', class="form-control" type="text" placeholder='URL' required)
+          div(class="col-lg-6 col-md-6 col-sm-6 col-xs-7 mb-3")
+            input(type='file' name='filedata')
+          div(class="col-lg-6 col-md-6 col-sm-6 col-xs-7 ")
+            input(class="btn btn-success" type='submit', value='Добавить')
+      br
+      ul(class="list-group")
+      each val in result
+        li(class="list-group-item serviceList" id = val.id ) #{val.name} #{val.url} #{val.path}
+          i(class="caret fa fa-caret-down")
+        div(class="slide")
+          a(class="btn btn-dark" href='/listParsers' role="button") Загрузить
+          //form(name='formImport', action='/parser', method='post')
+            button(class="btn btn-dark" type="submit" name='address' value=val.url) Загрузить
+          br
+          a(class="btn btn-dark" href='/property/' + val.id role="button") Изменить
+          font()=" "
+          a(class="btn btn-danger" href='/delBrand/' + val.id role="button") Удалить
+          p

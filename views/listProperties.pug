@@ -1,0 +1,28 @@
+extends layout
+block variables
+  include variables
+block content
+    br
+    .container
+      h2=title
+      br
+      ul(class="list-group")
+      each val in result
+        if val.type === null
+          li(class="list-group-item serviceList" style={color: 'red', background: '#FFD2D2'} id = val.id ) #{val.name}, тип: не добавлен!
+            i(class="caret fa fa-caret-down")
+          div(class="slide")
+            br
+            a(class="btn btn-dark" href='/property/' + val.id role="button") Изменить
+            font()=" "
+            a(class="btn btn-danger" href='/delBrand/' + val.id role="button") Удалить
+            p
+        else         
+          li(class="list-group-item serviceList" id = val.id ) #{val.name}, тип: #{val.type} 
+            i(class="caret fa fa-caret-down")
+          div(class="slide")
+            br
+            a(class="btn btn-dark" href='/property/' + val.id role="button") Изменить
+            font()=" "
+            a(class="btn btn-danger" href='/delBrand/' + val.id role="button") Удалить
+            p

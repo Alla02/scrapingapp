@@ -1,0 +1,16 @@
+extends layout
+block variables
+  include variables
+block content
+  main.my-form
+    .container
+        h3(class="indexpug_h2 firstHeader ")= title
+        div(class="row edit-div")
+          div(class="leftSide col-xs-4 col-sm-4")
+            ul(class="list-group mt-2")
+              li(class="list-group-item")
+                a(href='/changeLastname', class='text-center new-account') Изменить логин
+              li(class="list-group-item")
+                a(href='/changeEmail', class='text-center new-account') Изменить e-mail
+              li(class="list-group-item")
+                a(href='/changePassword', class='text-center new-account') Изменить пароль

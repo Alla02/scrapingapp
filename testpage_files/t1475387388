@@ -1,0 +1,260 @@
+
+
+
+
+
+//zp_dmp_sync.zp
+
+
+(function () {
+    if(true){
+    var d_i = document.createElement("img");
+    d_i.style.cssText="width:1px !important; height:1px !important; display:none !important;";
+    d_i.setAttribute("alt","");
+    d_i.setAttribute("src","https://rtb.com.ru/prodmp-client-sync?noRedirect=true");
+    var s = document.body;
+    s.appendChild(d_i);}
+})();
+
+
+//Adspend
+
+(function() {
+	var ra = document.createElement('script');
+	ra.type = 'text/javascript';
+	ra.async = true;
+	ra.src = (('https:' == document.location.protocol ? 'https:' : 'http:')+'//cdn.rtb.com.ru/visitTracking/visitTracking.min.js');
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ra, s);
+})();
+
+
+
+
+
+
+
+//sync_li
+
+(function () {
+    if(true){
+    var d_i = document.createElement("img");
+    d_i.style.cssText="width:1px !important; height:1px !important; display:none !important;";
+    d_i.setAttribute("alt","");
+    d_i.setAttribute("src","//counter.yadro.ru/id127/ddp-id.gif");
+    var s = document.body;
+    s.appendChild(d_i);}
+})();
+
+
+
+
+
+
+//zp_kia_all.zp
+
+
+
+
+
+//GetIntent
+
+if (typeof __GetI === "undefined") {
+    __GetI = [];
+}
+(function () {
+    var p = {
+        type: "VIEW",
+        /* config START */
+        site_id: "6106",
+        product_id: "",
+        product_price: "",
+        category_id: "",
+        pixel_id: ""
+        /* config END */
+    };
+    __GetI.push(p);
+    var domain = (typeof __GetI_domain) == "undefined" ? "px.adhigh.net" : __GetI_domain;
+    var src = ('https:' == document.location.protocol ? 'https://' : 'http://') + domain + '/p.js';
+    var script = document.createElement( 'script' );
+    script.type = 'text/javascript';
+    script.src = src;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(script, s);
+})();
+
+
+
+
+//Soloway
+
+
+(function (w, d, n, u, s) {
+w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
+var a=d.createElement(s),m=d.getElementsByTagName(s)[0];
+a.async=true;a.src=u;m.parentNode.insertBefore(a,m)
+})(window, document, 'DSPCounter', '//tags.soloway.ru/DSPCounter.js', 'script');
+
+DSPCounter('send', {
+  'sid'       : '222029',
+  'site_area' : 'OcshWScx',
+  'user_id'   : '',
+  'lead_id'   : '',
+  'order_sum' : ''
+});
+
+
+//MediaSniper
+
+(function() {
+	var ra = document.createElement('script');
+	ra.type = 'text/javascript';
+	ra.async = true;
+	ra.src = (('https:' == document.location.protocol ? 'https:' : 'http:')+'//static.terratraf.io/engine/GP.js');
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ra, s);
+})();
+
+window.generalPixel = window.generalPixel || [];
+window.generalPixel.push({type:'GPID', id:'10002199'});
+window.generalPixel.push({UserID:'XXX'});
+
+
+
+
+
+
+//ADSPEND
+
+(function(w, d) {
+    var n = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+
+    w.ADSPEND = {
+        onReady: function(f, a) {
+            var i = setInterval(function() {
+                if (this.r !== true) return;
+                clearInterval(i); try {
+                    this[f].apply(this, a);
+                } catch(e) {}
+            }.bind(this), 100);
+        }
+    };
+
+    s.addEventListener('load', function() {
+        w.ADSPEND.r = true;
+    });
+
+    s.async = true;
+    s.src = '//cdn.rtb.com.ru/as-main.js';
+    n.parentNode.insertBefore(s, n);
+	
+})(window, document);
+
+ADSPEND.onReady('retargeting', ['5ec2b0d198657b153506c708']);
+
+
+
+//SegmentPixel
+
+
+(function() {
+	var ra = document.createElement('script');
+	ra.type = 'text/javascript';
+	ra.async = true;
+	ra.src = (('https:' == document.location.protocol ? 'https:' : 'http:')+'//secure.adnxs.com/seg?add=22184329&t=1');
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ra, s);
+})();
+
+
+//Hibryd
+
+
+window._txq = window._txq || [];
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//st.hybrid.ai/txsp.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+_txq.push(['createPixel', '6038c32e7bc72f2cf8a71122']);
+_txq.push(['track', 'PageView']);
+
+
+
+//omnidsp
+
+var pl_config = {
+        platform:32,
+        placement:33,
+        event:null,
+        tags:[],
+        init: function () {
+            // external callback
+        }
+    };
+
+(function() {
+	var ra = document.createElement('script');
+	ra.type = 'text/javascript';
+	ra.async = true;
+	ra.src = (('https:' == document.location.protocol ? 'https:' : 'http:')+'//t.omnidsp.com/pl.js');
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(ra, s);
+})();
+
+
+//hybrid
+
+window._txq = window._txq || [];
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//st.hybrid.ai/txsp.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+_txq.push(['createPixel', '623da8a67bc72faac4211d3f']);
+_txq.push(['track', 'PageView']);
+
+
+//DigitalMax
+
+(function () {
+    var d_i = document.createElement("img");
+    d_i.setAttribute("height","1px");
+    d_i.setAttribute("width","1px");
+    d_i.setAttribute("alt","");
+    d_i.setAttribute("src","https://secure.adnxs.com/seg?add=29850529&t=2");
+    var s = document.body;
+    s.appendChild(d_i);
+})();
+
+
+
+
+
+
+//zp_kia_cerato_2.zp
+
+
+
+//ADSPEND
+
+(function(w, d) {
+    var n = d.getElementsByTagName('script')[0],
+        s = d.createElement('script');
+
+    w.ADSPEND = {
+        onReady: function(f, a) {
+            var i = setInterval(function() {
+                if (this.r !== true) return;
+                clearInterval(i); try {
+                    this[f].apply(this, a);
+                } catch(e) {}
+            }.bind(this), 100);
+        }
+    };
+
+    s.addEventListener('load', function() {
+        w.ADSPEND.r = true;
+    });
+
+    s.async = true;
+    s.src = '//cdn.rtb.com.ru/as-main.js';
+    n.parentNode.insertBefore(s, n);
+})(window, document);
+
+ADSPEND.onReady('retargeting', ['5eaad81498657b4f68f8f5bf']);

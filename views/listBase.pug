@@ -1,0 +1,18 @@
+extends layout
+block variables
+  include variables
+block content
+    br
+    .container
+      h2=title
+      br
+      ul(class="list-group")
+      each val in result
+        li(class="list-group-item serviceList" id = val.id ) #{val.mName} Тип: #{val.typeName} Снаряженная масса: #{val.curb_weight} Полная масса: #{val.full_weight} Длина #{val.full_length} Ширина #{val.full_width} Высота #{val.full_height}
+          i(class="caret fa fa-caret-down")
+        div(class="slide")
+          br
+          a(class="btn btn-dark" href='/brand/' + val.id role="button") Изменить
+          font()=" "
+          a(class="btn btn-danger" href='/delBrand/' + val.id role="button") Удалить
+          p
